@@ -1,12 +1,11 @@
-# 2025_03_11_IntegerCloudVarFacade
-Scratch Cloud Var is a nice concept. Have hosted server that can share integer between a game what ever the tech behind it. This tool is just an abstract layer pushing and receiving integer.
+# 2025_03_11_IntegerCloudVarFacade  
 
-I have a Websocket server that allows to share integer between the game clients. 
-But I could use Mirror, or Unity Network, or WebTransfort.
+Scratch Cloud Variables are a great concept. They allow a hosted server to share integers between game clients, regardless of the underlying technology. This tool serves as an abstraction layer for sending and receiving integers.  
 
-The stabilty of the how can be change through time.
+I have a WebSocket server that enables integer sharing between game clients. However, I could also use Mirror, Unity Network, or WebTransport.  
 
-What is not changing is the will to just send an integer between the clients of a multiplayer to make it easy.
+The stability of the underlying technology may change over time.  
 
-In here you will find this abstract layer of just sending an receiving integer.
-That you can hook later at the system you want to use.
+What remains constant is the goal: to make it easy to send an integer between multiplayer clients.  
+
+Here, you'll find this abstract layer for sending and receiving integers, which you can later integrate with the system of your choice.
