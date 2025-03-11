@@ -1,11 +1,11 @@
-# 2025_03_11_IntegerCloudVarFacade  
+# Integer Lobby Facade
 
-Scratch Cloud Variables are a great concept. 
+Scratch Cloud Variables are a great concept in Scratch.
 They allow a hosted server to share integers between game clients, regardless of the underlying technology. 
 This tool serves as an abstraction layer for sending and receiving integers.
-(Without storing a name label here.)
 
-If you send a integer, all the clients connected will received the integer.  
+It allows to easily make some type of unprotected multiplayer game.
+If you send a integer, all the clients connected are going to received the integer.  
 
 I have a WebSocket server that enables integer sharing between game clients. 
 However, I could also use Mirror, Unity Network, or WebTransport.  
