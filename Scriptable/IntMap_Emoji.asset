@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: IntMap_Emoji
   m_EditorClassIdentifier: 
   m_data:
-    m_languageCodeNN: EN
     m_mapping:
     - m_label: Like
       m_integerValue: 10001
@@ -31,11 +30,6 @@ MonoBehaviour:
       m_description: 
       m_markdownDescription: 
     - m_label: "Supprise \U0001F914"
-      m_integerValue: 10002
-      m_languageCode: EN
-      m_description: 
-      m_markdownDescription: 
-    - m_label: "Task done \u2705"
       m_integerValue: 10002
       m_languageCode: EN
       m_description: 
