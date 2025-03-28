@@ -10,8 +10,8 @@ namespace Eloi.IntegerLobby
 
         [SerializeField] UnityEvent<int> m_onIntegerPushToServer;
         [SerializeField] UnityEvent<int> m_onIntegerReceivedFromServer;
-        [SerializeField] int m_lastReceivedInteger = 0;
-        [SerializeField] int m_lastPushedInteger = 0;
+        [SerializeField] public int m_lastReceivedInteger = 0;
+        [SerializeField] public int m_lastPushedInteger = 0;
         public void PushIntegerToLobbyServer(int integerValue)
         {
             m_lastPushedInteger = integerValue;
