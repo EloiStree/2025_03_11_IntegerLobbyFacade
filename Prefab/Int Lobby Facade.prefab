@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7035322199091479228}
   - component: {fileID: 4444537638678437519}
   m_Layer: 0
-  m_Name: Debug Push
+  m_Name: Sample Push
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,8 @@ Transform:
   m_LocalPosition: {x: -0.016290653, y: -0.015272987, z: -0.039318506}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 324557504812118525}
   m_Father: {fileID: 5367804067315456708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4444537638678437519
@@ -47,9 +48,10 @@ MonoBehaviour:
   m_onIntegerPush:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2926013819083776745}
-        m_TargetAssemblyTypeName: Eloi.IntegerLobby.IntegerLobbyFacadeMono, be.elab.intlobby
-        m_MethodName: PushIntegerToLobbyServer
+      - m_Target: {fileID: 2777533851334538232}
+        m_TargetAssemblyTypeName: Eloi.IntegerLobby.StaticIntMono_PushUnityToServer,
+          be.elab.intlobby
+        m_MethodName: PushIntegerUnityToServer
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -62,7 +64,7 @@ MonoBehaviour:
   m_inspectorValue: 31418
   m_minValueRange: 0
   m_maxValueRange: 100
---- !u!1 &4166632772196434586
+--- !u!1 &2171251766070603249
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,92 +72,201 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3026287005739771318}
-  - component: {fileID: 3608750049266245177}
+  - component: {fileID: 4425934750558687083}
+  - component: {fileID: 3316077967349419779}
   m_Layer: 0
-  m_Name: Static Int Lobby
+  m_Name: Server Code To Unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3026287005739771318
+--- !u!4 &4425934750558687083
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4166632772196434586}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 834422117695789573}
-  - {fileID: 2931582778469613033}
-  m_Father: {fileID: 5367804067315456708}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3608750049266245177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4166632772196434586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d7fd05363f78b54c8d17cfce49bdbb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_facade: {fileID: 2926013819083776745}
-  m_lastClientToLobby: 0
-  m_lastLobbyToClient: 0
---- !u!1 &4472534181659026671
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 834422117695789573}
-  - component: {fileID: 5061092570390832295}
-  m_Layer: 0
-  m_Name: Demo Push To Lobby
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &834422117695789573
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4472534181659026671}
+  m_GameObject: {fileID: 2171251766070603249}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3026287005739771318}
+  m_Father: {fileID: 5118356445472270346}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5061092570390832295
+--- !u!114 &3316077967349419779
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4472534181659026671}
+  m_GameObject: {fileID: 2171251766070603249}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46fb8372eec65d24e953ffbed9b9c21d, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f9620221edcb264ea4b1e603d561e20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_lastPushedValue: 0
+--- !u!1 &2529785963108177478
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 324557504812118525}
+  - component: {fileID: 4625267226602576239}
+  m_Layer: 0
+  m_Name: Loop Push
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &324557504812118525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2529785963108177478}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.016290653, y: 0.015272987, z: 0.039318506}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7035322199091479228}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4625267226602576239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2529785963108177478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8713fe2659f37ba4eb3b4ae7e5ba4978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onTick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4444537638678437519}
+        m_TargetAssemblyTypeName: Eloi.IntegerLobby.IntLobbyMono_PushIntegerSample,
+          be.elab.intlobby
+        m_MethodName: PushRandom0to100
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_secondsBetweenTicks: 3
+--- !u!1 &5660695369512234482
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5118356445472270346}
+  m_Layer: 0
+  m_Name: Join Server Code
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5118356445472270346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5660695369512234482}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4425934750558687083}
+  - {fileID: 3663512169101450534}
+  m_Father: {fileID: 5367804067315456708}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6218600169987791517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3663512169101450534}
+  - component: {fileID: 7844710736956893038}
+  m_Layer: 0
+  m_Name: Send to Server
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3663512169101450534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6218600169987791517}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5118356445472270346}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7844710736956893038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6218600169987791517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 260776fe67cd57b49adb3252e74bda58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_sendInteger: 0
+  m_onIntegerSendToServer:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Eloi.WsAsymAuth.AsymAuthMono_PushNtpIntegerInTunnel,
+          be.elab.wsasymauth
+        m_MethodName: PushNtpIntegerInTunnel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_onIntegerSendToServerAsString:
+    m_PersistentCalls:
+      m_Calls: []
+  m_catchException: 0
 --- !u!1 &6378912475445884910
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,7 +276,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5367804067315456708}
-  - component: {fileID: 2926013819083776745}
+  - component: {fileID: 2777533851334538232}
+  - component: {fileID: 8032569184055746614}
+  - component: {fileID: 2978562777374206193}
+  - component: {fileID: 4184576042016779033}
   m_Layer: 0
   m_Name: Int Lobby Facade
   m_TagString: Untagged
@@ -186,11 +300,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 5118356445472270346}
   - {fileID: 7035322199091479228}
-  - {fileID: 3026287005739771318}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2926013819083776745
+--- !u!114 &2777533851334538232
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,63 +313,58 @@ MonoBehaviour:
   m_GameObject: {fileID: 6378912475445884910}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74716ad27a0e8c540bf9014c4969964c, type: 3}
+  m_Script: {fileID: 11500000, guid: d037f8015fcc6bc40b2c8980a507dbfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_onIntegerPushToServer:
-    m_PersistentCalls:
-      m_Calls: []
-  m_onIntegerReceivedFromServer:
-    m_PersistentCalls:
-      m_Calls: []
-  m_lastReceivedInteger: 0
-  m_lastPushedInteger: 0
---- !u!1 &7309762477770120047
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2931582778469613033}
-  - component: {fileID: 4451648395490541434}
-  m_Layer: 0
-  m_Name: Demo Listen Lobby
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2931582778469613033
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7309762477770120047}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3026287005739771318}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4451648395490541434
+--- !u!114 &8032569184055746614
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7309762477770120047}
+  m_GameObject: {fileID: 6378912475445884910}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 023588ce81b952d4b9e0d8325310d45f, type: 3}
+  m_Script: {fileID: 11500000, guid: 260776fe67cd57b49adb3252e74bda58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_lastReceivedValue: 0
-  m_onIntegerReceivedFromLobby:
+  m_sendInteger: 0
+  m_onIntegerSendToServer:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onIntegerSendToServerAsString:
+    m_PersistentCalls:
+      m_Calls: []
+  m_catchException: 0
+--- !u!114 &2978562777374206193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6378912475445884910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9620221edcb264ea4b1e603d561e20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4184576042016779033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6378912475445884910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82d744d6b0bd157459a98c142aaa8082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_receivedInteger: 0
+  m_onIntegerReceivedFromServer:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onIntegerReceivedFromServerAsString:
     m_PersistentCalls:
       m_Calls: []
   m_catchException: 0
