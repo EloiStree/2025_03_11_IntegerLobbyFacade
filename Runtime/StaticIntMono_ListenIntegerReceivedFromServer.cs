@@ -12,6 +12,7 @@ namespace Eloi.IntegerLobby
         public UnityEvent<string> m_onIntegerReceivedFromServerAsString;
         public bool m_catchException;
 
+
         private void OnEnable()
         {
             StaticIntegerLobby.AddListenerServerToUnity(NotifyServerToUnity);
@@ -25,10 +26,6 @@ namespace Eloi.IntegerLobby
 
         private void NotifyServerToUnity(int obj)
         {
-            m_receivedInteger = obj;
-            m_onIntegerReceivedFromServer.Invoke(obj);
-            m_onIntegerReceivedFromServerAsString.Invoke(obj.ToString());
-
             if (m_catchException)
             {
                 m_receivedInteger = obj;
